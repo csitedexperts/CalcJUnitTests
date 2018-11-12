@@ -5,69 +5,56 @@
  */
 package calculator;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 
 public class CalculatorTest {
-    
-    /*public CalculatorTest() {
+
+	/*public CalculatorTest() {
     }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-*/
-    /**
-     * Test of main method, of class Calculator.
-     */
-    @Test
-    public void testAdd() {
-        Calculator calculator=new Calculator();
-        double a=5.0;
-        double b=5.0;
-        double result= calculator.add(a, b);
-        System.out.println("result = " + result);
-        Assert.assertEquals(null, 10.0, result);
-//        Assert.assertEquals(10.0, result);
-    }
-  @Test
-  public void testSub() {
-        Calculator calculator=new Calculator();
-        double a=10;
-        double b=5;
-        double result= calculator.sub(a, b);
-        Assert.assertEquals(5.0, result);
-  }
-  public void testMult() {
-        Calculator calculator=new Calculator();
-        double a=5;
-        double b=5;
-        double result=calculator.mult(a, b);
-        Assert.assertEquals(25, result);
-  }
-  public void testDiv() {
-        Calculator calculator=new Calculator();
-        double a=5;
-        double b=5;
-        double result=calculator.div(a, b);
-        Assert.assertEquals(1, result);
-}
+
+
+	/**
+	 * Test of main method, of class Calculator.
+	 */
+	@Test
+	public void testAdd() {
+		Calculator c = new Calculator();
+		int a=5;
+		int b=5;
+		int result=c.add(a, b);
+		Assert.assertEquals(10, result);
+	}
+	@Test
+	public void testSub() {
+		Calculator c = new Calculator();
+		int a=10;
+		int b=5;
+		int result=(int) c.sub(a, b);
+		Assert.assertEquals(5, result);
+	}
+	@Test
+	public void testModulo() {
+		Calculator c = new Calculator();
+		int a=10;
+		int b=4;
+		int result=(int) c.modulo(a, b);
+		Assert.assertEquals(2, result);
+	}
+	
+	public void testMult() {
+		Calculator c = new Calculator();
+		float a=5;
+		float b=5;
+		float result=c.mult(a, b);
+		Assert.assertEquals(25, result);
+	}
+	public void testDiv() {
+		Calculator c = new Calculator();
+		float a=5;
+		float b=5;
+		float result=c.div(a, b);
+		Assert.assertEquals(1, result);
+	}
 }
